@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create
+      show-sql: true
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/fleetappdb
+    username: postgres
+    password: 12345
+
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:/data.sql
+
